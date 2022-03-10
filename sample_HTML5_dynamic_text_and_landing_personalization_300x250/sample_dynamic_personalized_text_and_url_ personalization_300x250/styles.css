@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+}
+
+.imageClass {
+	cursor: pointer;
+	background-size:300px 250px;
+	background-position:relative;
+	height:250px;
+	left:0px;
+	top:0px;
+	width:300px;
+	transform:translate(0, 20px);
+	-moz-transform:translate(0, 20px);
+	-webkit-transform:translate(0, 20px);
+	-o-transform:translate(0, 20px);
+	-ms-transform:translate(0, 20px);
+	border: 1px solid gainsboro
+
+}
+
+.textArea {
+	position: relative;
+	color: white;
+	font-size: 18px;
+	text-align: topleft;
+	font-weight: bold;
+	top: 20%;
+	left: 45%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 85%;
+}
+
+.textMargin {
+	margin-top: 8px;
+}
+
+.textColor {
+	color: #FFFFFF;
+}
+
+.companyName {
+	width: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	color: #03a9f4;
+}

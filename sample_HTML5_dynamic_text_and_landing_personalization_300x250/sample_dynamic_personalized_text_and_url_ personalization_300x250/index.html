@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>
+		Test
+	</title>
+	<link rel="StyleSheet" href="styles.css" type="text/css" />
+	<script type="text/javascript" src="https://acdn.adnxs.com/html5-lib/1.3.0/appnexus-html5-lib.min.js"></script>
+	<script>
+		// This personalization is to replace text on Ad and click URL based on company.
+		// Company Name will be shown as the custom text on the Ad
+
+		var imageUrl = 'Global_1.png'; // this image is shown for all
+		var loader = 'loader3.gif';
+		var companyUrlMapping = {
+			"UW Medical": "https://www.uwmedicine.org/", // Key is used as custom text and value as the custom click URL based on matched company
+			"OHSU": "https://www.ohsu.edu/",
+			"Virginia Mason": "https://www.virginiamason.org/",
+			"Seattle CCA": "https://www.seattlecca.org/",
+
+			// add your additional personalization here in the format
+			// [Company Name]: "Click URL"
+			// Note: Please customize your creative appropriately to allow company name of max 22
+			// characters for clean display. Creatives may get rejected if the text overlaps with
+			// other image components within the ad.
+			// We recommend 22 characters space for 300x250 creative size
+			// and 16 chars for 160x600 skyscraper creative
+		};
+	</script>
+	<script src="index.js">
+	</script>
+</head>
+
+<body onLoad="init()">
+	<div>
+		<div id="content" class="imageClass">
+				<div id='text-area' class="textArea">
+					<div id='company-name' class='companyName'></div>
+					<div class='textColor textMargin'>ABM</div>
+					<div class='textColor textMargin'>Orchestration</div>
+					<div class="textMargin">Platform</div>
+				</div>
+		</div>
+	</div>
+</body>
+
+</html>
