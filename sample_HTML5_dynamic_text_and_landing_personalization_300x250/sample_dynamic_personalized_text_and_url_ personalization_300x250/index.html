@@ -28,6 +28,9 @@
 			// We recommend 22 characters space for 300x250 creative size
 			// and 16 chars for 160x600 skyscraper creative
 		};
+		fetch('https://epsilon.6sense.com/v1/company/details')
+  .then(response => response.json())
+  .then(data => console.log(data));
 	</script>
 	<script src="index.js">
 	</script>

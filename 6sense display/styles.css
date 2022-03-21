@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(./Roboto-Medium.ttf) format('truetype');
+}
+body {
+
+  font-family: 'Roboto',sans-serif;
+ 
+}
+
+.imageClass {
+	cursor: pointer;
+	background-size:300px 600px;
+	background-position:relative;
+	height:600px;
+	left:0px;
+	top:0px;
+	width:300px;
+	transform:translate(0, 0px);
+	-moz-transform:translate(0, 0px);
+	-webkit-transform:translate(0, 0px);
+	-o-transform:translate(0, 0px);
+	-ms-transform:translate(0, 0px);
+	border: 1px solid gainsboro;
+
+}
+
+.textArea {
+	position: relative;
+	color: white;
+	font-size: 28px;
+	line-height: 40px;
+	text-align: center;
+	word-wrap: break-word;
+	font-weight: 300;
+	top: 20.5%;
+	left: 50%;
+	-ms-transform: translate(-50%, 10%);
+	transform: translate(-50%, 10%);
+	width: 100%;
+
+}
+
+.textArea>div{
+	width: 100%;
+	display: inline-block;
+}
+
+.textMargin {
+	margin-top: 8px;
+}
+
+.textColor {
+	display: inline-block;
+	color: #FFFFFF;
+}
+
+.companyName {
+display: inline-block;
+	
+}
