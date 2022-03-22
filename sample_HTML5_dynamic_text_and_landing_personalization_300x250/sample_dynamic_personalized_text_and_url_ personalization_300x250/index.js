@@ -13,6 +13,7 @@ function init() {
       if (this.status === 200){ // if we get the success response
         res = JSON.parse(this.responseText); // this is how you parse the response from company details api
         companyName = res.company.name;
+        displayPersonalizedText(companyName);
         var matchedMappingKey = Object.keys(companyUrlMapping).find(function (name) {
           return name.toLowerCase() === companyName.toLowerCase();
         }); // match company name ignoring case from the mapping object
@@ -37,7 +38,7 @@ function showImage() {
 function displayPersonalizedText(userCompanyName) {
   var companyNameEle = document.getElementById('company-name'); // the div that shows the custom text, the company name
   companyNameEle.innerHTML = userCompanyName + ','
-  document.getElementById('text-area').style.top = '30%' // move the text a little more down to accomodate showing company name
+  // document.getElementById('text-area').style.top = '30%' // move the text a little more down to accomodate showing company name
 }
 
 function addListeners() {
