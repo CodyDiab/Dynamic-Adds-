@@ -34,7 +34,23 @@ function showImage() {
 
 function displayPersonalizedText(userCompanyName) {
   var companyNameEle = document.getElementById('company-name'); // the div that shows the custom text, the company name
-  companyNameEle.innerHTML = userCompanyName + ','
+  if(userCompanyName.length<=10){
+    //  asign bucket 1 sizes
+    companyNameEle.style.fontSize = "20pt";
+    companyNameEle.innerHTML = userCompanyName + ','
+   }else if(userCompanyName.length>10 && userCompanyName.length<=25){  
+    //  asign bucket 2 sizes
+    companyNameEle.style.fontSize = "15pt";
+    companyNameEle.innerHTML = userCompanyName + ','
+   }else if(userCompanyName.length>25 && userCompanyName.length<55){
+    //  asign bucket 3 sizes
+    companyNameEle.style.fontSize = "12pt";
+    companyNameEle.innerHTML = userCompanyName + ','
+   }else{
+   
+    companyNameEle.style.display ="none";
+   }
+  
   // document.getElementById('text-area').style.top = '30%' // move the text a little more down to accomodate showing company name
 }
 

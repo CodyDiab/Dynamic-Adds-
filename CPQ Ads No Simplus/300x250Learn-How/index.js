@@ -1,7 +1,7 @@
 
 function init() {
   window.dynamicContent = document.getElementById('content'); // The div to replace the image into.
-  window.clickUrl = "https://www.copado.com/devops-hub/maximize-salesforce-cpq-with-automated-testing?utm_source=6sense&utm_medium=cpc&utm_campaign=crt_cpq_fy23_q1&utm_term=watch_demo&utm_content=test_cpq_like_its_2022 "; // the global variable to store the url from mapping. 'undefined' during init process.
+  window.clickUrl = "https://www.copado.com/devops-hub/maximize-salesforce-cpq-with-automated-testing?utm_source=6sense&utm_medium=cpc&utm_campaign=crt_cpq_fy23_q1&utm_term=learn_how&utm_content=test_cpq_like_its_2022"; // the global variable to store the url from mapping. 'undefined' during init process.
   window.companyName = undefined;  // the global variable to store the company name. 'undefined' during init process.
   // Showing loader
   showImage(loader);
@@ -34,22 +34,8 @@ function showImage() {
 
 function displayPersonalizedText(userCompanyName) {
   var companyNameEle = document.getElementById('company-name'); // the div that shows the custom text, the company name
-  if(userCompanyName.length<=10){
-    //  asign bucket 1 sizes
-    companyNameEle.style.fontSize = "20pt";
-    companyNameEle.innerHTML = userCompanyName + ','
-   }else if(userCompanyName.length>10 && userCompanyName.length<=25){  
-    //  asign bucket 2 sizes
-    companyNameEle.style.fontSize = "15pt";
-    companyNameEle.innerHTML = userCompanyName + ','
-   }else if(userCompanyName.length>25 && userCompanyName.length<55){
-    //  asign bucket 3 sizes
-    companyNameEle.style.fontSize = "12pt";
-    companyNameEle.innerHTML = userCompanyName + ','
-   }else{
-   
-    companyNameEle.style.display ="none";
-   }
+  companyNameEle.innerHTML = userCompanyName + ','
+  // document.getElementById('text-area').style.top = '30%' // move the text a little more down to accomodate showing company name
 }
 
 function addListeners() {
