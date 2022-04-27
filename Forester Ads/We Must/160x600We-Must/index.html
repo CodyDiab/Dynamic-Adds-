@@ -12,7 +12,7 @@
 		// This personalization is to replace text on Ad and click URL based on company.
 		// Company Name will be shown as the custom text on the Ad
 
-		var imageUrl = '300x600-6Sense-Dynamic-Ad_CRT+Salesforce-Rev-Cloud_Watch-Demo_2-Logo.png'; // this image is shown for all
+		var imageUrl = '6S_Forrester-empty_160x600.png'; // this image is shown for all
 		var loader = 'loader3.gif';
 		var noMatch = 'default.png';
 		var companyUrlMapping = {
@@ -97,18 +97,19 @@
 </head>
 
 <body onLoad="init()">
+	<a href="javascript:void(0)" onClick="window.open(APPNEXUS.getClickTag(), '_blank');">
 	<div>
 		<div id="content" class="imageClass">
 					<div id="text-area" class="textArea">
 	
 					<div id="company-name" class="companyName"></div>
-					<div class="textColor">Test CPQ like</div>
-					<br>
-					<div class="textColor">it's 2022</div>
+					<div class="textColor textMargin">We Must Address Testing in Low-Code Development</div>
+					<div class="textColorTwo textMargin ">A Report from Forrester Consulting</div>
 					
 				</div>
 		</div>
 	</div>
+	</a>
 </body>
 
 </html>

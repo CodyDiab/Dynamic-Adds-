@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+
+	font-family: 'Nunito Sans', sans-serif;
+ 
+}
+
+.imageClass {
+	cursor: pointer;
+	background-size:300px 250px;
+	background-position:relative;
+	height:250px;
+	left:0px;
+	top:0px;
+	width:300px;
+	transform:translate(0, 0px);
+	-moz-transform:translate(0, 0px);
+	-webkit-transform:translate(0, 0px);
+	-o-transform:translate(0, 0px);
+	-ms-transform:translate(0, 0px);
+	border: 1px solid gainsboro;
+
+}
+
+.textArea {
+	position: relative;
+	color: white;
+	text-align: left;
+	word-wrap: break-word;
+	font-weight: 600;
+	left:5%;
+	top:5%;
+	
+	width: 100%;
+
+}
+
+.textArea>div{
+	width: 100%;
+	display: inline-block;
+}
+
+.textMargin {
+	margin-top: 8px;
+	;
+}
+
+.textColor {
+	display: inline-block;
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: 800;
+	background: -webkit-linear-gradient(#00C3EF , #16ECD1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.textColorTwo{font-size:12px;}
+
+.companyName {
+display: inline-block;
+color:#ffffff;
+font-size: 15px;
+	
+}

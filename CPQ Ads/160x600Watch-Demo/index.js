@@ -1,23 +1,23 @@
 
 function init() {
   window.dynamicContent = document.getElementById('content'); // The div to replace the image into.
-  window.clickUrl = "https://www.copado.com/devops-hub/maximize-salesforce-cpq-with-automated-testing?utm_source=6sense&utm_medium=cpc&utm_campaign=crt_cpq_fy23_q1&utm_term=watch_demo&utm_content=test_cpq_like_its_2022 "; // the global variable to store the url from mapping. 'undefined' during init process.
+ 
   window.companyName = undefined;  // the global variable to store the company name. 'undefined' during init process.
   // Showing loader
   showImage(loader);
   var xhr = new XMLHttpRequest();
   xhr.withCredentials = true;
   xhr.addEventListener("readystatechange", function () {
-    addListeners(); // Adding click listener to content; to handle click redirects
+    // addListeners(); // Adding click listener to content; to handle click redirects
     if (this.readyState == 4) { // After we get the response.
       showImage();
       if (this.status === 200){ // if we get the success response
         res = JSON.parse(this.responseText); // this is how you parse the response from company details api
         companyName = res.company.name;
         displayPersonalizedText(companyName);
-        var matchedMappingKey = Object.keys(companyUrlMapping).find(function (name) {
-          return name.toLowerCase() === companyName.toLowerCase();
-        }); 
+        // var matchedMappingKey = Object.keys(companyUrlMapping).find(function (name) {
+        //   return name.toLowerCase() === companyName.toLowerCase();
+        // }); 
       }
     }
   });
@@ -52,10 +52,10 @@ function displayPersonalizedText(userCompanyName) {
    }
 }
 
-function addListeners() {
-	dynamicContent.addEventListener('click', clickEventHandler, false);
-}
+// function addListeners() {
+// 	dynamicContent.addEventListener('click', clickEventHandler, false);
+// }
 
-function clickEventHandler(e) { 
-  window.open(clickUrl);
-}
+// function clickEventHandler(e) { 
+//   window.open(clickUrl);
+// }

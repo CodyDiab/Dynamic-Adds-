@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>
+		Test
+	</title>
+	<link rel="StyleSheet" href="styles.css" type="text/css" />
+	<script type="text/javascript" src="https://acdn.adnxs.com/html5-lib/1.3.0/appnexus-html5-lib.min.js"></script>
+	<script>
+		// This personalization is to replace text on Ad and click URL based on company.
+		// Company Name will be shown as the custom text on the Ad
+
+		var imageUrl = '6S_Forrester-empty_160x600.png'; // this image is shown for all
+		var loader = 'loader3.gif';
+		var noMatch = 'default.png';
+		var companyUrlMapping = {
+
+			"8x8" : "https://engage.appexchange.com/copado-high-tech?dom=8x8.com&utm_source=6S",
+"AMD" : "https://engage.appexchange.com/copado-high-tech?dom=amd.com&utm_source=6S",
+"Akamai" : "https://engage.appexchange.com/copado-high-tech?dom=akamai.com&utm_source=6S",
+"Ancestry" : "https://engage.appexchange.com/copado-high-tech?dom=ancestry.com&utm_source=6S",
+"Asana" : "https://engage.appexchange.com/copado-high-tech?dom=asana.com&utm_source=6S",
+"Avnet" : "https://engage.appexchange.com/copado-high-tech?dom=avnet.com&utm_source=6S",
+"BazaarVoice" : "https://engage.appexchange.com/copado-high-tech?dom=bazaarvoice.com&utm_source=6S",
+"Bloomberg" : "https://engage.appexchange.com/copado-high-tech?dom=bloombergindustry.com&utm_source=6S",
+"Cengage" : "https://engage.appexchange.com/copado-high-tech?dom=cengage.com&utm_source=6S",
+"Ceridian" : "https://engage.appexchange.com/copado-high-tech?dom=ceridian.com&utm_source=6S",
+"Ciena" : "https://engage.appexchange.com/copado-high-tech?dom=ciena.com&utm_source=6S",
+"Citrix" : "https://engage.appexchange.com/copado-high-tech?dom=citrix.com&utm_source=6S",
+"Cloudflare" : "https://engage.appexchange.com/copado-high-tech?dom=cloudflare.com&utm_source=6S",
+"CoreSite" : "https://engage.appexchange.com/copado-high-tech?dom=coresite.com&utm_source=6S",
+"Coupa" : "https://engage.appexchange.com/copado-high-tech?dom=coupa.com&utm_source=6S",
+"CSG" : "https://engage.appexchange.com/copado-high-tech?dom=csgi.com&utm_source=6S",
+"Deltek" : "https://engage.appexchange.com/copado-high-tech?dom=deltek.com&utm_source=6S",
+"Diebold Nixdorf" : "https://engage.appexchange.com/copado-high-tech?dom=dieboldnixdorf.com&utm_source=6S",
+"DoorDash" : "https://engage.appexchange.com/copado-high-tech?dom=doordash.com&utm_source=6S",
+"EA" : "https://engage.appexchange.com/copado-high-tech?dom=ea.com&utm_source=6S",
+"FinancialForce" : "https://engage.appexchange.com/copado-high-tech?dom=financialforce.com&utm_source=6S",
+"Fortinet" : "https://engage.appexchange.com/copado-high-tech?dom=fortinet.com&utm_source=6S",
+"Fujitsu" : "https://engage.appexchange.com/copado-high-tech?dom=fujitsu.com&utm_source=6S",
+"Gainsight" : "https://engage.appexchange.com/copado-high-tech?dom=gainsight.com&utm_source=6S",
+"Genpact" : "https://engage.appexchange.com/copado-high-tech?dom=genpact.com&utm_source=6S",
+"GF" : "https://engage.appexchange.com/copado-high-tech?dom=gf.com&utm_source=6S",
+"GoDaddy" : "https://engage.appexchange.com/copado-high-tech?dom=godaddy.com&utm_source=6S",
+"Groupon" : "https://engage.appexchange.com/copado-high-tech?dom=groupon.com&utm_source=6S",
+"grubhub" : "https://engage.appexchange.com/copado-high-tech?dom=grubhub.com&utm_source=6S",
+"HealthEdge" : "https://engage.appexchange.com/copado-high-tech?dom=healthedge.com&utm_source=6S",
+"Hitachi Vantara" : "https://engage.appexchange.com/copado-high-tech?dom=hitachivantara.com&utm_source=6S",
+"Inmar" : "https://engage.appexchange.com/copado-high-tech?dom=inmar.com&utm_source=6S",
+"Internet Brands" : "https://engage.appexchange.com/copado-high-tech?dom=nternetbrands.com&utm_source=6S",
+"Manhattan Associates" : "https://engage.appexchange.com/copado-high-tech?dom=manh.com&utm_source=6S",
+"MRI Software" : "https://engage.appexchange.com/copado-high-tech?dom=mrisoftware.com&utm_source=6S",
+"NAVEX Global" : "https://engage.appexchange.com/copado-high-tech?dom=navexglobal.com&utm_source=6S",
+"Nutanix" : "https://engage.appexchange.com/copado-high-tech?dom=nutanix.com&utm_source=6S",
+"opentable" : "https://engage.appexchange.com/copado-high-tech?dom=opentable.com&utm_source=6S",
+"Orion" : "https://engage.appexchange.com/copado-high-tech?dom=orionadvisortech.com&utm_source=6S",
+"Palo Alto Networks" : "https://engage.appexchange.com/copado-high-tech?dom=paloaltonetworks.com&utm_source=6S",
+"Paycor" : "https://engage.appexchange.com/copado-high-tech?dom=paycor.com&utm_source=6S",
+"Persistent" : "https://engage.appexchange.com/copado-high-tech?dom=persistent.com&utm_source=6S",
+"Pitney Bowes" : "https://engage.appexchange.com/copado-high-tech?dom=pitneybowes.com&utm_source=6S",
+"Poly" : "https://engage.appexchange.com/copado-high-tech?dom=poly.com&utm_source=6S",
+"Pulse Secure" : "https://engage.appexchange.com/copado-high-tech?dom=pulsesecure.net&utm_source=6S",
+"Pure" : "https://engage.appexchange.com/copado-high-tech?dom=purestorage.com&utm_source=6S",
+"Qualcomm" : "https://engage.appexchange.com/copado-high-tech?dom=qualcomm.com&utm_source=6S",
+"realpage" : "https://engage.appexchange.com/copado-high-tech?dom=realpage.com&utm_source=6S",
+"Servicemax" : "https://engage.appexchange.com/copado-high-tech?dom=servicemax.com&utm_source=6S",
+"ServiceSource" : "https://engage.appexchange.com/copado-high-tech?dom=servicesource.com&utm_source=6S",
+"ServiceTitan" : "https://engage.appexchange.com/copado-high-tech?dom=servicetitan.com&utm_source=6S",
+"SkillSoft" : "https://engage.appexchange.com/copado-high-tech?dom=skillsoft.com&utm_source=6S",
+"Snowflake" : "https://engage.appexchange.com/copado-high-tech?dom=snowflake.com&utm_source=6S",
+"Softchoice" : "https://engage.appexchange.com/copado-high-tech?dom=softchoice.com&utm_source=6S",
+"SIE" : "https://engage.appexchange.com/copado-high-tech?dom=sie.com&utm_source=6S",
+"Sprout Social" : "https://engage.appexchange.com/copado-high-tech?dom=sproutsocial.com&utm_source=6S",
+"Ultimate Software" : "https://engage.appexchange.com/copado-high-tech?dom=ultimatesoftware.com&utm_source=6S",
+"Toast" : "https://engage.appexchange.com/copado-high-tech?dom=pos.toasttab.com&utm_source=6S",
+"UKG" : "https://engage.appexchange.com/copado-high-tech?dom=ukg.com&utm_source=6S",
+"Veeam" : "https://engage.appexchange.com/copado-high-tech?dom=veeam.com&utm_source=6S",
+"Waystar" : "https://engage.appexchange.com/copado-high-tech?dom=waystar.com&utm_source=6S",
+"Zebra" : "https://engage.appexchange.com/copado-high-tech?dom=zebra.com&utm_source=6S",
+"Zillow" : "https://engage.appexchange.com/copado-high-tech?dom=zillow.com&utm_source=6S",
+"Ziprecruiter" : "https://engage.appexchange.com/copado-high-tech?dom=ziprecruiter.com&utm_source=6S"
+
+
+// add your additional personalization here in the format
+			// [Company Name]: "Click URL"
+			// Note: Please customize your creative appropriately to allow company name of max 22
+			// characters for clean display. Creatives may get rejected if the text overlaps with
+			// other image components within the ad.
+			// We recommend 22 characters space for 300x250 creative size
+			// and 16 chars for 160x600 skyscraper creative
+		};
+	</script>
+	<script src="index.js">
+	</script>
+</head>
+
+<body onLoad="init()">
+	<a href="javascript:void(0)" onClick="window.open(APPNEXUS.getClickTag(), '_blank');"></a>
+	<div>
+		<div id="content" class="imageClass">
+					<div id="text-area" class="textArea">
+	
+					<div id="company-name" class="companyName"></div>
+					<div class="textColor textMargin">Low-Code Development Needs Low-Code Testing</div>
+					<div class="textColorTwo textMargin ">Get Up to Speed</div>
+					
+				</div>
+		</div>
+	</div>
+</a>
+</body>
+
+</html>
